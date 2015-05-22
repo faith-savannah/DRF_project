@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'DRFproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'DRF_database',
-        'USERNAME': 'admin',
+        'USER': 'admin',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
-        'PORT':'5432',
+        'PORT': 5432,
     }
 }
 
