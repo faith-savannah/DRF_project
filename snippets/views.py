@@ -12,6 +12,7 @@ class SnippetList(APIView):
 	List all snippets,or create a new snippet.
 	'''
 	def get(self, request, format=None):
+
 		snippets = Snippet.objects.all()
 		serializer = SnippetSerializer(snippets, many=True)
 		return Response(serializer.data)
@@ -40,6 +41,7 @@ class SnippetDetail(APIView):
 
 	def put(self, request, pk, format=None):
 		snippet = self.get_object(pk)
+
 		serializer = SnippetSerializer(snippet, data=request.data)
 		if serializer.is_valid():
 			serializer.save()
